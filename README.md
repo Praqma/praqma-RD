@@ -1,15 +1,19 @@
-# praqma-RD
-Praqma research and development work issue tracker
+# Praqma R&D
 
-This is an experiment to track research work in Praqma, and doing it in public.
+Praqma research and development work issue tracker. We make our research in public using github issues.
 
-Ideas:
+All research usually ends with a commit, like some learnings in markdown format, a blog post or similar.
+
+
+## Usage repo and R&D issues
+
+Idea:
 
 * large areas of research could have their own repositories, like or chef research: https://github.com/Praqma/study-succotash
-* if they don't have their own repo, it could be a milestone or label
-* misc and simpler things, could to start with just be issue here and without any scope or context.
+* if they don't have their own repo, it could be a milestone or label here in this repo
+* misc and simpler things, could to start with just be issue here and without any scope or context
 
 
-## Areas
+## Current areas
 
 * Docker: Subdirectory [/docker](/docker) have a separate [readme](/docker/README.md)
