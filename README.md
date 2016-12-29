@@ -18,4 +18,4 @@ Idea:
 
 * Docker: Subdirectory [/docker](/docker) have a separate [readme](/docker/README.md)
 
-* HashiCorp Vault: Subdirectory [/vaut](/vault) have a separate [readme](/vault/README.md)
+* HashiCorp Vault: Subdirectory [/vault](/vault) have a separate [readme](/vault/README.md)
