@@ -11,12 +11,22 @@ Background: We met a few colleagues after Christmas for an informal litle sessio
 
 We was looking into two simple use-cases. Shows in the following image, and explained below.
 
+![First few use-cases](images/first-few-use-cases.png)
+
 ### Scripted access to secrets
 
+When we write scripts, we would like to get secrets from Vault and use them.
 
+* The process and use of the secrets should be - well secret, meaning unless we echo out the content of keys the should be hidden.
+* We assume the computer, or environment, that need to talk to Vault will have a access token to use to get access to the secret. Distributing that access token is a another challenge.
 
 ### Password and secret lists
 
+Today we have a list of secret we have outgrown. All our secrets are encrypted with a key phrase. We only have one, but should have more.
+Using Vault for these secrets sharing seems easier.
+
+* password list with several levels of access and secrets
+* different user roles
 
 ## Spin up a Vault dev setup
 
