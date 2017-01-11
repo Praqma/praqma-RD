@@ -19,3 +19,5 @@ Idea:
 * Docker: Subdirectory [/docker](/docker) have a separate [readme](/docker/README.md)
 
 * HashiCorp Vault: Subdirectory [/vault](/vault) have a separate [readme](/vault/README.md)
+
+* ELK stack: Subdirectory [/elk](/elk) have a separate [readme](/elk/README.md)
