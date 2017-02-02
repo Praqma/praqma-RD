@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.9">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2.9">
+      <queuingDurationMillis>4</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.5">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+  </actions>
+  <queueId>6</queueId>
+  <timestamp>1485444830151</timestamp>
+  <startTime>1485444830159</startTime>
+  <result>SUCCESS</result>
+  <duration>28790</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>SUCCESS</result>
+    <script>stage (&quot;start&quot;) {
+  node {
+    build &quot;A&quot;
+  }  
+  node {
+    build &quot;B&quot;
+  }
+  node {
+    build &quot;C&quot;
+  }  
+  node {
+    build &quot;D&quot;
+  }
+}
+</script>
+    <loadedScripts class="map"/>
+    <sandbox>false</sandbox>
+    <iota>27</iota>
+    <head>1:27</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

@@ -1,0 +1,21 @@
+Started by upstream project "[8mha:AAAAnh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JP2CzIJUoI2p8SWpxSX6ANa07r7IAAAA[0mpipeline_test" build number [8mha:AAAAoB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JP2CzIJUoI2p8SWpxSX6xgYAHtmvGMoAAAA=[0m30
+originally caused by:
+ Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building remotely on [8mha:AAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQifWOTtDRzi+Rkw5RUA10LS/PUNANTUwDtvVdi1AAAAA==[0m34ff78cc1de0-897ef055 (utility-slave java swarm alpine linux 3.3 docker) in workspace /root/workspace/A
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/timea/urgyurufutty.git # timeout=10
+Fetching upstream changes from https://github.com/timea/urgyurufutty.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/timea/urgyurufutty.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 66f9fbb68bbb503df8deeb5f0e4a2a98ee5b80e2 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 66f9fbb68bbb503df8deeb5f0e4a2a98ee5b80e2
+ > git rev-list 66f9fbb68bbb503df8deeb5f0e4a2a98ee5b80e2 # timeout=10
+[A] $ /bin/sh -xe /tmp/hudson164737705843579107.sh
++ rm 66f9fbb68bbb503df8deeb5f0e4a2a98ee5b80e2-A.txt
++ echo 66f9fbb68bbb503df8deeb5f0e4a2a98ee5b80e2
+Archiving artifacts
+Finished: SUCCESS

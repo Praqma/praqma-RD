@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@2.9">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>5</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+      <triggers/>
+    </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.23">
+    <script>
+stage (&quot;start&quot;) {
+  node {
+    build &quot;A&quot;
+    echo BUILD_NUMBER
+  }  
+  node {
+    build &quot;B&quot;
+    cat &quot;first-stash&quot;
+  }
+  node {
+    build &quot;C&quot;
+  }  
+  node {
+    build &quot;D&quot;
+  }
+}
+</script>
+    <sandbox>false</sandbox>
+  </definition>
+  <triggers/>
+</flow-definition>

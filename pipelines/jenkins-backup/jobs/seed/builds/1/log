@@ -1,0 +1,13 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building remotely on [8mha:AAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQi/TQzC4tESyMDc/PUZF0LS/PUNANTUwD6jetL1AAAAA==[0mf688a92077ec-897ef055 (utility-slave java swarm alpine linux 3.3 docker) in workspace /root/workspace/seed
+Processing provided DSL script
+Warning: (script, line 20) plugin 'golang' needs to be installed
+Warning: (script, line 23) plugin 'nodejs' needs to be installed
+Warning: (script, line 26) plugin 'envinject' needs to be installed
+Warning: (script, line 54) plugin 'golang' needs to be installed
+Warning: (script, line 58) plugin 'envinject' needs to be installed
+Added items:
+    GeneratedJob{name='scripted-olhus-test'}
+    GeneratedJob{name='scripted-olhus-integration'}
+Build step 'Process Job DSLs' changed build result to UNSTABLE
+Finished: UNSTABLE

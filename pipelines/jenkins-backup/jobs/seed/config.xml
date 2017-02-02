@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <javaposse.jobdsl.plugin.ExecuteDslScripts plugin="job-dsl@1.54">
+      <scriptText>job(&apos;scripted-olhus-test&apos;) {
+    description &apos;Running the tests of deployed FE and BE code.&apos;
+    logRotator {
+        numToKeep(5)
+        artifactNumToKeep(5)
+    }
+    scm {
+        git {
+            remote {
+            	credentials(&apos;06b98734-0514-4bae-9f64-a016713e0c12&apos;)
+                url(&apos;https://github.com/timea/amager-olhus.git&apos;)
+            }
+            branch(&apos;*/ready**&apos;)
+        }
+    }
+    triggers {
+    	githubPush()
+    }
+    wrappers {
+        golang(&apos;Go1.7&apos;)
+    }
+    wrappers {
+        nodejs(&apos;node v6.8.1&apos;)
+    }
+    steps {
+        environmentVariables {
+            envs(GOPATH: &apos;/var/lib/jenkins/workspace/scripted-olhus-test/&apos;, PATH: &apos;$PATH./usr/local/bin&apos;)
+        }
+        shell(
+            &apos;cd src/server \ngo install \ngo test -v\ncd ..\nnpm install \nrm -fr karma.conf.js \ncp &quot;/home/timea/karma/karma.conf.js&quot; &quot;/var/lib/jenkins/workspace/scripted-olhus-test/src/karma.conf.js&quot; \nkarma start --reporters junit,dots&apos;
+            )
+    }
+    publishers {
+        downstream(&apos;scripted-olhus-integration&apos;, &apos;SUCCESS&apos;)
+    }
+}
+
+job(&apos;scripted-olhus-integration&apos;) {
+    description &apos;Pretested integration for the olhus project.&apos;
+    logRotator {
+        numToKeep(5)
+        artifactNumToKeep(5)
+    }
+    scm {
+        git {
+            remote {
+            	credentials(&apos;06b98734-0514-4bae-9f64-a016713e0c12&apos;)
+                url(&apos;https://github.com/timea/amager-olhus.git&apos;)
+            }
+            branch(&apos;*/ready**&apos;)
+        }
+    }
+    wrappers {
+        golang(&apos;Go1.7&apos;)
+        pretestedIntegration(&quot;SQUASHED&quot;,  &quot;master&quot;, &quot;origin&quot;)
+    }
+    steps {
+        environmentVariables {
+            envs(GOPATH: &apos;/var/lib/jenkins/workspace/scripted-olhus-integration/&apos;)
+        }
+        shell(&apos;echo &quot;Integration is in progress&quot;&apos;)
+    }
+
+
+    publishers {
+        pretestedIntegration()
+    }
+}</scriptText>
+      <usingScriptText>true</usingScriptText>
+      <ignoreExisting>false</ignoreExisting>
+      <ignoreMissingFiles>false</ignoreMissingFiles>
+      <failOnMissingPlugin>false</failOnMissingPlugin>
+      <unstableOnDeprecation>false</unstableOnDeprecation>
+      <removedJobAction>IGNORE</removedJobAction>
+      <removedViewAction>IGNORE</removedViewAction>
+      <lookupStrategy>JENKINS_ROOT</lookupStrategy>
+    </javaposse.jobdsl.plugin.ExecuteDslScripts>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

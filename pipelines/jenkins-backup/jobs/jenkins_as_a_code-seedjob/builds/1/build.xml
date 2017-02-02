@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.9">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-LegacyCodeCause>
+            <stackTrace>
+              <trace>hudson.model.Cause$LegacyCodeCause.&lt;init&gt;(Cause.java:132)</trace>
+              <trace>jenkins.model.ParameterizedJobMixIn.scheduleBuild(ParameterizedJobMixIn.java:78)</trace>
+              <trace>org.jenkinsci.plugins.workflow.job.WorkflowJob.scheduleBuild(WorkflowJob.java:257)</trace>
+              <trace>hudson.model.BuildableItem$scheduleBuild.call(Unknown Source)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:117)</trace>
+              <trace>initialjobs$_run_closure2.doCall(initialjobs.groovy:48)</trace>
+              <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
+              <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
+              <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
+              <trace>java.lang.reflect.Method.invoke(Method.java:498)</trace>
+              <trace>org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:93)</trace>
+              <trace>groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:325)</trace>
+              <trace>org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:294)</trace>
+              <trace>groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1024)</trace>
+              <trace>groovy.lang.Closure.call(Closure.java:414)</trace>
+              <trace>groovy.lang.Closure.call(Closure.java:430)</trace>
+              <trace>org.codehaus.groovy.runtime.DefaultGroovyMethods.callClosureForMapEntry(DefaultGroovyMethods.java:5228)</trace>
+              <trace>org.codehaus.groovy.runtime.DefaultGroovyMethods.each(DefaultGroovyMethods.java:2107)</trace>
+              <trace>org.codehaus.groovy.runtime.dgm$163.invoke(Unknown Source)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoMetaMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:251)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.call(PogoMetaMethodSite.java:71)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:48)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:113)</trace>
+              <trace>org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)</trace>
+              <trace>initialjobs.run(initialjobs.groovy:46)</trace>
+              <trace>groovy.lang.GroovyShell.evaluate(GroovyShell.java:585)</trace>
+              <trace>jenkins.util.groovy.GroovyHookScript.execute(GroovyHookScript.java:136)</trace>
+              <trace>jenkins.util.groovy.GroovyHookScript.execute(GroovyHookScript.java:127)</trace>
+              <trace>jenkins.util.groovy.GroovyHookScript.run(GroovyHookScript.java:110)</trace>
+              <trace>hudson.init.impl.GroovyInitScript.init(GroovyInitScript.java:41)</trace>
+              <trace>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)</trace>
+              <trace>sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)</trace>
+              <trace>sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)</trace>
+              <trace>java.lang.reflect.Method.invoke(Method.java:498)</trace>
+              <trace>hudson.init.TaskMethodFinder.invoke(TaskMethodFinder.java:104)</trace>
+              <trace>hudson.init.TaskMethodFinder$TaskImpl.run(TaskMethodFinder.java:175)</trace>
+              <trace>org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:282)</trace>
+              <trace>jenkins.model.Jenkins$7.runTask(Jenkins.java:1026)</trace>
+              <trace>org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:210)</trace>
+              <trace>org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:117)</trace>
+              <trace>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)</trace>
+              <trace>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)</trace>
+              <trace>java.lang.Thread.run(Thread.java:745)</trace>
+            </stackTrace>
+          </hudson.model.Cause_-LegacyCodeCause>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2.9">
+      <queuingDurationMillis>4567</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+    <org.jenkinsci.plugins.workflow.libs.LibrariesAction plugin="workflow-cps-global-lib@2.5">
+      <libraries/>
+    </org.jenkinsci.plugins.workflow.libs.LibrariesAction>
+  </actions>
+  <queueId>1</queueId>
+  <timestamp>1485958103318</timestamp>
+  <startTime>1485958103328</startTime>
+  <result>FAILURE</result>
+  <duration>9351</duration>
+  <keepLog>false</keepLog>
+  <execution class="org.jenkinsci.plugins.workflow.cps.CpsFlowExecution">
+    <result>FAILURE</result>
+    <script>
+import javaposse.jobdsl.plugin.*
+
+node(&quot;utility-slave&quot;) {
+    git branch: &quot;master&quot;, credentialsId: &quot;jenkins&quot;, url: &quot;git@github.com:Praqma/JenkinsAsCodeReference.git&quot;
+    step([
+        $class: &apos;ExecuteDslScripts&apos;,
+        targets: &quot;jobdsl-gradle/src/jobs/groovy/*.groovy&quot;,
+        ignoreMissingFiles: true,
+        ignoreExisting: false,
+        removedJobAction: RemovedJobAction.DELETE,
+        removedViewAction: RemovedViewAction.DELETE,
+        lookupStrategy: LookupStrategy.JENKINS_ROOT,
+        additionalClasspath: &quot;jobdsl-gradle/src/main/groovy&quot;
+    ])
+}</script>
+    <loadedScripts class="map"/>
+    <sandbox>false</sandbox>
+    <iota>8</iota>
+    <head>1:8</head>
+  </execution>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>

@@ -1,0 +1,23 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building remotely on [8mha:AAAAqx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzREgZ5/eT83ILSktQifWOTtDRzi+Rkw5RUA11Tk+TkFINEcwBKRwoa1AAAAA==[0m34ff78cc1de0-54ccd0a7 (utility-slave java swarm alpine linux 3.3 docker) in workspace /root/workspace/A
+Cloning the remote Git repository
+Cloning repository https://github.com/timea/urgyurufutty.git
+ > git init /root/workspace/A # timeout=10
+Fetching upstream changes from https://github.com/timea/urgyurufutty.git
+ > git --version # timeout=10
+ > git fetch --tags --progress https://github.com/timea/urgyurufutty.git +refs/heads/*:refs/remotes/origin/*
+ > git config remote.origin.url https://github.com/timea/urgyurufutty.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/timea/urgyurufutty.git # timeout=10
+Fetching upstream changes from https://github.com/timea/urgyurufutty.git
+ > git fetch --tags --progress https://github.com/timea/urgyurufutty.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision ffb1295f771a3ba6547417e4053b0a74c5999104 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ffb1295f771a3ba6547417e4053b0a74c5999104
+First time build. Skipping changelog.
+[A] $ /bin/sh -xe /tmp/hudson9072014544635446365.sh
++ echo ffb1295f771a3ba6547417e4053b0a74c5999104
+ffb1295f771a3ba6547417e4053b0a74c5999104
+Finished: SUCCESS

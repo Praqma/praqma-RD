@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<flow-build plugin="workflow-job@2.9">
+  <actions>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+    <jenkins.metrics.impl.TimeInQueueAction plugin="metrics@3.1.2.9">
+      <queuingDurationMillis>3</queuingDurationMillis>
+    </jenkins.metrics.impl.TimeInQueueAction>
+  </actions>
+  <queueId>19</queueId>
+  <timestamp>1485964317505</timestamp>
+  <startTime>1485964317513</startTime>
+  <result>FAILURE</result>
+  <duration>35</duration>
+  <keepLog>false</keepLog>
+  <checkouts class="hudson.util.PersistedList"/>
+</flow-build>
