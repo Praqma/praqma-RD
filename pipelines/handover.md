@@ -4,7 +4,7 @@
 
 - clone the Jenkins as Code Praqma repo
 - clone this repo
-- you would need to create some folders for Jenkins as code as the README says. To pick up the work where it was left off, take the jenkins-backup folder from this repo and copy it to the proper place as the Jenkins as code README says. When you spin up jenkins, it will have the jobs used before.
+- you would need to create some folders for Jenkins as code as the README says. To pick up the work where it was left off, create the jenkins-backup folder as it is said in the README and replace some folders you just created with the folders from this repo (/pipelines/jenkins-backup). When you spin up jenkins, it will have the jobs used before.
 
 ## The project
 
