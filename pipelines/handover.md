@@ -6,6 +6,10 @@
 - clone this repo
 - you would need to create some folders for Jenkins as code as the README says. To pick up the work where it was left off, take the jenkins-backup folder from this repo and copy it to the proper place as the Jenkins as code README says. When you spin up jenkins, it will have the jobs used before.
 
+## The project
+
+You can see the details on #23. There is a milestone to group the issues called Pipeline research.
+
 ## What was done
 
 Important findings
