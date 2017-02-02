@@ -21,3 +21,5 @@ Idea:
 * HashiCorp Vault: Subdirectory [/vault](/vault) have a separate [readme](/vault/README.md)
 
 * ELK stack: Subdirectory [/elk](/elk) have a separate [readme](/elk/README.md)
+
+* Pipelines: Subdirectory [/pipelines](/pipelines) have a separate [readme](/pipelines/README.md)
