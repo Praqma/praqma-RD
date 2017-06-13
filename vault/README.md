@@ -1,5 +1,9 @@
 # Vault
 
+
+**PLEASE SEE OUR SERVER REFERENCE INSTALLATION in https://github.com/Praqma/vaultReference**
+
+
 [Vault by HashiCorp](https://www.vaultproject.io/) is a pretty cool for managing secrets. Something we all need a tool for these days with full automation of our infrastructure and when we script everything.
 
 
